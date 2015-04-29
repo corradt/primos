@@ -1,0 +1,30 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+ .navbar-brand{
+
+	font-family:'Airstream';
+	font-size: 30px;
+	color: #8470FF !important;
+	text-shadow: 2px 2px 8px grey !important; 
+
+}
+
+
+.title{
+
+	
+	font-size: 25px;
+	color: #fff !important;
+	text-align: center;
+	text-shadow: 2px 2px 8px #FF0000 !important; 
+
+}
+
+
+
+

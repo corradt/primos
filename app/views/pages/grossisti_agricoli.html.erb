@@ -1,0 +1,37 @@
+  <% doc=exists_grossisti_agricoli_page %>
+  <% title=doc.css("title").text%>
+  <% @righe=doc.css(".views-table")  %>
+  <% @righe.each do |intestazione| %>
+  <table class="table table-condensed">
+  
+  <tr>    
+  <th><%= intestazione.at_css("th.views-field" ".views-field-field-stand").text %></th> 
+  <th><%= intestazione.at_css("th.views-field" ".views-field-title").text %></th>
+  <th><%= intestazione.at_css("th.views-field" ".views-field-field-phone").text %></th>
+  <th><%= intestazione.at_css("th.views-field" ".views-field-field-fax").text %></th>
+  <th><%= intestazione.at_css("th.views-field" ".views-field-field-ref").text %></th>
+  </tr>
+  
+  <% doc.css("tr", "tr.even","tr.odd").each do |riga| %>
+  <% next unless stand=riga.css("td.views-field" ".views-field-field-stand")[0] %>
+  <% next unless ragSociale=riga.css("td.views-field" ".views-field-title")[0] %>
+  <% next unless phone=riga.css("td.views-field" ".views-field-field-phone")[0] %>
+  <% next unless fax=riga.css("td.views-field" ".views-field-field-fax")[0] %>
+  <% next unless ref=riga.css("td.views-field" ".views-field-field-ref")[0] %>
+  
+  <tr>
+  <td><%= stand.content %></td>
+  <td><%= ragSociale.content %></td>
+  <td class="danger"><%= phone.content %></td>
+  <td class="info"><%= fax.content %></td>
+  <td class="warning"><%= ref.content %></td>
+
+  </tr>
+  <% end %>
+
+
+
+  </table>
+
+  <% end %>
+

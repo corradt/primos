@@ -1,0 +1,45 @@
+  <% doc=exists_prezzi_ismea_page %>
+  <% title=doc.css("title").text%>
+  <% @righe=doc.css("table.IsmeaDataTable")  %>
+  <% @righe.each do |intestazione| %>
+  <table class="table table-condensed">
+  
+  <tr>    
+  <th><%= intestazione.css("th[scope='col']")[0].text %></th> 
+  <th><%= intestazione.css("th[scope='col']")[1].text %></th>
+  <th><%= intestazione.css("th[scope='col']")[2].text %></th>
+  <th><%= intestazione.css("th[scope='col']")[3].text %></th>
+  <th><%= intestazione.css("th[scope='col']")[4].text %></th>
+  <th><%= intestazione.css("th[scope='col']")[5].text %></th>
+  <th><%= intestazione.css("th[scope='col']")[6].text %></th>
+  <th><%= intestazione.css("th[scope='col']")[7].text %></th>
+    
+  </tr>
+
+  <% doc.css("tr", "tr.even","tr.odd").each do |riga| %>
+  <% next unless specie=riga.css("th.odd","th.even")[0] %>
+  <% next unless mercato=riga.css("td.odd","td.even")[0] %>
+  <% next unless provenienza=riga.css("td.odd","td.even")[1] %>
+  <% next unless pezzatura=riga.css("td.odd","td.even")[2] %>
+  <% next unless prezzomin=riga.css("td.odd","td.even")[3] %>
+  <% next unless prezzomax=riga.css("td.odd","td.even")[4] %>
+  <% next unless prezzominprec=riga.css("td.odd","td.even")[5] %>
+  <% next unless prezzomaxprec=riga.css("td.odd","td.even")[6] %>
+  
+  <tr>
+  <td><%= specie.content %></td>
+  <td><%= mercato.content %></td>
+  <td><%= provenienza.content %></td>
+  <td><%= pezzatura.content %></td>
+  <td class="warning"><%= prezzomin.content %></td>
+  <td class="info"><%= prezzomax.content %></td>
+  <td class="success"><%= prezzominprec.content %></td>
+  <td class="danger"><%= prezzomaxprec.content %></td>
+  </tr>
+  <% end %>
+  
+
+  </table>
+
+  <% end %>
+

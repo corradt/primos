@@ -1,0 +1,48 @@
+  <% doc=exists_prezzi_torino_page %>
+  <% title=doc.css("title").text%>
+  <% @righe=doc.css(".views-table")  %>
+  <% @righe.each do |intestazione| %>
+  <table class="table table-condensed">
+  <tr><td class="text-center"><strong style="color:red">Prezzi aggiornati il:  <%=extract_date title %></strong></td></tr>
+  <tr>    
+  <th><%= intestazione.at_css(".views-field-field-specie").text %></th> 
+  <th><%= intestazione.at_css(".views-field-field-varieta").text %></th>
+  <th><%= intestazione.at_css(".views-field-pmin").text %></th>
+  <th><%= intestazione.at_css(".views-field-ppre").text %></th>
+  <th><%= intestazione.at_css(".views-field-pmax").text %></th>
+  <th><%= intestazione.at_css(".views-field-field-calibro").text %></th>
+  <th><%= intestazione.at_css(".views-field-field-categoria").text %></th>
+  <th><%= intestazione.at_css(".views-field-field-origine").text %></th>
+  <th><%= intestazione.at_css(".views-field-field-unitamisura").text %></th>
+  <th><%= intestazione.at_css(".views-field-field-gruppo").text %></th>
+  </tr>
+  <% doc.css("tr", "tr.even","tr.odd").each do |riga| %>
+  <% next unless specie=riga.css("td[data-title='Specie']")[0] %>
+  <% next unless varieta=riga.css("td[data-title='Varietà']")[0] %>
+  <% next unless pmin=riga.css("td[data-title='P. Min']")[0] %>
+  <% next unless ppre=riga.css("td[data-title='P. Pre']")[0] %>
+  <% next unless pmax=riga.css("td[data-title='P. Max']")[0] %>
+  <% next unless calibro=riga.css("td[data-title='Calibro']")[0] %>
+  <% next unless categoria=riga.css("td[data-title='Cat.']")[0] %>
+  <% next unless origine=riga.css("td[data-title='Origine']")[0] %>
+  <% next unless unitamisura=riga.css("td[data-title='Unita misura']")[0] %>
+  <% next unless gruppo=riga.css("td[data-title='Gruppo']")[0] %>
+  <tr >
+  <td><%= specie.content %></td>
+  <td><%= varieta.content %></td>
+  <td class="warning"><%= pmin.content %></td>
+  <td class="info"><%= ppre.content %></td>
+  <td class="success"><%= pmax.content %></td>
+  <td><%= calibro.content %></td>
+  <td><%= categoria.content %></td>
+  <td><%= origine.content %></td>
+  <td><%= unitamisura.content %></td>
+  <td><%= gruppo.content %></td>
+  </tr>
+  <% end %>
+
+
+  </table>
+
+  <% end %>
+
