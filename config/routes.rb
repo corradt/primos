@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'control_users/index'
+
   resources :products
 
   resources :carts

@@ -4,7 +4,7 @@ ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
-# Use sqlite3 as the database for Active Record
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -21,14 +21,23 @@ gem 'simple_form', '~> 3.1.0'
 gem 'devise'
 gem "auto_html"
 gem 'nokogiri', '~> 1.6.6.2'
-gem 'momentjs-rails', '>= 2.8.1'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
+
 #gem 'haml', '~> 4.0.6'
-gem 'haml-rails', '~> 0.8.2'
+#gem 'haml-rails', '~> 0.8.2'
 gem 'mechanize', '~> 2.7.3'
+gem 'pundit', '~> 1.0.0'
+
+
+
+gem 'puma'
+
 group :development, :test do
-  gem 'spring'
-  gem 'sqlite3'
+       gem 'sqlite3'
+end
+
+group :production  do
+	gem 'rails_12factor'
+	gem 'pg'	
 end
 
 
