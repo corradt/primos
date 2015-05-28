@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
+  
   get 'control_users/index'
-
-  resources :products
 
   resources :carts
 
@@ -20,7 +19,7 @@ Rails.application.routes.draw do
   get 'pages/prezzi_mercato_agricolo'
   get 'pages/prezzi_mercato_ittico'
   get 'pages/grossisti_agricoli'
- 
+   
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

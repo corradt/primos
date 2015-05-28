@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   enum role:[:customer,:staffMember,:establisher,:admin]
-  has_many :tasks, dependent: :destroy
+  #has_many :tasks, dependent: :destroy
 end
