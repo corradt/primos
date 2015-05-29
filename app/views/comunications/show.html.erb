@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @comunication.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @comunication.content %>
+</p>
+
+<h2> Comments </h2>
+<%= render @comunication.comments %>
+<br>
+
+<%= render "comments/form" %>
+
+<%= link_to 'Edit', edit_comunication_path(@comunication) %> |
+<%= link_to 'Back', comunications_path %>

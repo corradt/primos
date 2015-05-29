@@ -5,6 +5,7 @@
  
 <h2 class="text-center">Edit <%= resource_name.to_s.humanize %></h2>
     <%= f.input :email, required: true, autofocus: true,label:false,placeholder:"Email", class:"form-control" %>
+    <%= f.input :name, required: true, autofocus: true,label:false,placeholder:"Nome e Cognome", class:"form-control" %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>

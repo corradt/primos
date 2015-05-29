@@ -32,8 +32,8 @@
       <div class="container">
         <div class="carousel-caption">
           <h1 class="title">Chiedi ad esperti il loro parere </h1>
+          <%= render "homeLogged" %>
           
-          <p><a class="btn btn-large btn-default" href=<%= new_user_registration_path %>>Registrati</a></p>
         </div>
       </div>
     </div>
@@ -59,31 +59,34 @@
 
   <div class="featurette">
     <img class="featurette-image img-circle pull-right" src=<%= asset_path "prezzi-mercato.jpg" %>>
-   <h2 class="featurette-heading"> <span class="text-primary">Più trasparenza nei prezzi</span></h2>
-    <p class="lead">Vuoi essere sempre aggiornato sui prezzi dei principali mercati ittici e  ortofrutticoli Italiani? </p>
-    <p><a class="btn btn-large btn-primary" href=<%= new_user_registration_path %>>Registrati</a></p>
+  <a href=<%= pages_prezzi_mercato_agricolo_path %>><h2 class="featurette-heading"> <span class="text-primary">Più trasparenza nei prezzi</span></h2></a>
+    <p class="lead">Vuoi essere sempre aggiornato sui prezzi dei principali <a href=<%= pages_prezzi_mercato_ittico_path %>>mercati ittici </a> e  <a href=<%= pages_prezzi_mercato_agricolo_path %>>ortofrutticoli Italiani</a>?  </p>
+    <%= render "homeLogged" %>
   </div>
 
   <hr class="featurette-divider">
 
   <div class="featurette">
     <img class="featurette-image img-circle pull-left" src=<%= asset_path "patto.jpg" %>>
-    <h2 class="featurette-heading"> <span class="text-warning">Cerchi un nuovo acquirente?</span></h2>
-    <p class="lead">Stanco di lavorare molto per poi ricavare poco? Scegli un nuovo commerciante </p>
-    <p><a class="btn btn-large btn-primary" href= <%= new_user_registration_path %> >Registrati</a></p>
+    <a href="<%=pages_grossisti_agricoli_path %>"><h2 class="featurette-heading"> <span class="text-warning">Cerchi un nuovo acquirente?</span></h2></a>
+    <p class="lead">Stanco di lavorare molto per poi ricavare poco? <a href="<%=pages_grossisti_agricoli_path %>"> Scegli un nuovo commerciante </a></p>
+
+
+
+    <%= render "homeLogged" %>
   </div>
 
   <hr class="featurette-divider">
 
   <div class="featurette">
     <img class="featurette-image img-circle pull-right" src=<%= asset_path "team.jpg" %>>
-    <h2 class="featurette-heading"><span class="text-muted">Fatti consigliare da esperti!!</span></h2>
+    <a href="<%= new_comunication_path %>"><h2 class="featurette-heading"><span class="text-muted">Fatti consigliare da esperti!!</span></h2></a>
     <p >
         Vuoi conoscere i segreti di come crescere una pianta sana, forte con buon e tanto frutto?
 </p> 
     <br>
     <strong> Un team di oltre 1000 esperti, agronomi, biologi, geologi è pronto a consigliarti per ridurre al minimo il rischio di perdita e aumentare i tuoi guadagni </strong> 
-    <p><a class="btn btn-large btn-primary" href=<%= new_user_registration_path %>>Registrati</a></p>
+    <%= render "homeLogged" %>
   </div>
 
   <hr class="featurette-divider">

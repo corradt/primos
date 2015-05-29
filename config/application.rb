@@ -25,6 +25,33 @@ module Prova
     
     
     config.assets.paths << Rails.root.join("app","assets","images")
+
+# PER CONFIGURARE GMAIL ACCOUNT
+    #config.action_mailer.smtp_settings={
+       #     address: "smtp.gmail.com",
+       #     port: 587,
+       #     domain: "mail.google.com",
+       #     authentication: "plain",
+       #     enable_starttls_auto: true,
+       #     user_name: ENV['GMAIL_USERNAME'],
+       #     password: ENV['GMAIL_PASSW']
+
+        #}
+
+
+
+
+
+    ActionMailer::Base.smtp_settings = {
+    :port =>           '587',
+    :address =>        'smtp.mandrillapp.com',
+    :user_name =>      Rails.application.secrets.MANDRILL_USERNAME,
+    :password =>       Rails.application.secrets.MANDRILL_APIKEY,
+    :authentication => :plain
+}
+
+
+
    
   end
 end

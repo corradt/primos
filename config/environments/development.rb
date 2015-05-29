@@ -40,17 +40,6 @@ Rails.application.configure do
   config.breakpoint_server=true
   #config.action_controller.consider_all_requests_local=true
   config.action_mailer.delivery_method=:smtp
-  config.action_mailer.smtp_settings={
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "gmail.com",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: 'tcneasystems@gmail.com',
-    password: 'nscnfm.1'
-
-  }
-
-
+  
  
 end

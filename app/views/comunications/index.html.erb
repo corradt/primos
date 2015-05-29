@@ -1,0 +1,9 @@
+<p id="notice"> <%= notice %></p>
+
+<% @comunications.each do |comunication| %>
+<%= comunication.title %>
+<%= comunication.content %>
+<%= User.find(comunication.user_id).name %>
+<br>
+
+<% end %>

@@ -1,0 +1,21 @@
+<%= simple_form_for(@comunication,html:{class:"form-signin"}) do |f| %>
+  <%= f.error_notification %>
+
+  
+    <%= f.input :title,autofocus: true,label:false,placeholder:"in cosa vuoi essere aiutato?", class:"form-control" %>
+    <%= f.input :content,autofocus: true,label:false,placeholder:"Descrivici il tuo problema", class:"form-control"  %>
+
+   
+
+    
+
+    <%= f.hidden_field :from, :value => current_user.email %>
+
+
+   
+  
+
+  
+    <%= f.button :submit,"Invia", class:"btn btn-primary" %>
+
+<% end %>

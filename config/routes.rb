@@ -1,19 +1,16 @@
 Rails.application.routes.draw do
   
-  get 'control_users/index'
+  get 'comments/create'
 
-  resources :carts
-
-  resources :line_items
-
-  resources :tasks do
-    member do 
-      put :change
-    end
+  resources :comunications do
+    resources :comments
   end
 
+  get 'control_users/index'
+
+  
   devise_for :users
-  get 'pages/home'
+  
   get 'pages/prova'
 
   get 'pages/prezzi_mercato_agricolo'
