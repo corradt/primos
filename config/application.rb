@@ -47,8 +47,8 @@ module Prova
     :address =>        'smtp.mandrillapp.com',
     #:user_name =>      Rails.application.secrets.MANDRILL_USERNAME,
     #:password =>       Rails.application.secrets.MANDRILL_APIKEY,
-    :user_name =>       ENV["MANDRILL_USERNAME"],
-    :password =>        ENV["MANDRILL_APIKEY"],
+    :user_name =>       'tcorrado82@gmail.com',
+    :password =>       'faFtH76P9Po5kouRlg_5YA',
     :authentication => :plain
 }
 
