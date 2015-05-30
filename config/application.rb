@@ -45,13 +45,15 @@ module Prova
     ActionMailer::Base.smtp_settings = {
     :port =>           '587',
     :address =>        'smtp.mandrillapp.com',
-    :user_name =>      Rails.application.secrets.MANDRILL_USERNAME,
-    :password =>       Rails.application.secrets.MANDRILL_APIKEY,
+    #:user_name =>      Rails.application.secrets.MANDRILL_USERNAME,
+    #:password =>       Rails.application.secrets.MANDRILL_APIKEY,
+    :user_name =>       ENV["MANDRILL_USERNAME"]
+    :password =>        ENV["MANDRILL_APIKEY"]
     :authentication => :plain
 }
 
 
-
+ 
    
   end
 end
