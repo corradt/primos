@@ -27,7 +27,7 @@ gem 'nokogiri', '~> 1.6.6.2'
 gem 'mechanize', '~> 2.7.3'
 gem 'pundit', '~> 1.0.0'
 
-gem 'figaro', '~> 1.1.1'
+
 
 gem 'puma'
 
