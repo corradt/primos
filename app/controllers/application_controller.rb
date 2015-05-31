@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Pundit
+  
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -22,4 +23,13 @@ class ApplicationController < ActionController::Base
 	  	flash[:notice]="you are not authorized to access in this area"
 	  	redirect_to root_path
 	  end
+
+  
+
+
+
+    
+
+
+
 end

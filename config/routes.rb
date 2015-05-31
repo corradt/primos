@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  devise_for :admins, controllers: { registrations: "admins/registrations",sessions: "admins/sessions"}
+
+  devise_for :doctors, controllers: {registrations: "doctors/registrations", sessions: "doctors/sessions" }
+
+ 
+
   get 'comments/create'
 
   resources :comunications do
