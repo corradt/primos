@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Pundit
+  layout :layout_by_resource
   
 
   # Prevent CSRF attacks by raising an exception.
@@ -25,7 +26,16 @@ class ApplicationController < ActionController::Base
 	  end
 
   
+    def layout_by_resource
+      if devise_controller? && resource_name == :admin
+        "admin"
+      elsif devise_controller? && resource_name == :doctor
+        "doctor"
+      else
+        "application"
 
+      end
+    end
 
 
     
