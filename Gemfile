@@ -33,6 +33,7 @@ gem 'puma'
 
 group :development, :test do
        gem 'sqlite3'
+       gem 'dotenv-rails'
 end
 
 group :production  do

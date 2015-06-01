@@ -17,5 +17,6 @@
 
 #Ignore all passwords
 #/config/secrets.yml
+.env
 
 
