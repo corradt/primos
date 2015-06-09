@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  variety: MyString
+  minPrice: MyString
+  medPrice: MyString
+  maxPrice: MyString
+  calibro: MyString
+  category: MyString
+  origin: MyString
+  unitOfMisure: MyString
+  group: MyString
+
+two:
+  name: MyString
+  variety: MyString
+  minPrice: MyString
+  medPrice: MyString
+  maxPrice: MyString
+  calibro: MyString
+  category: MyString
+  origin: MyString
+  unitOfMisure: MyString
+  group: MyString

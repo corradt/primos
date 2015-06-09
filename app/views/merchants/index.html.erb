@@ -1,0 +1,28 @@
+<h1>Lista Commercianti Agricoli</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Stand</th>
+      <th>Ragionesociale</th>
+      <th>Telefono</th>
+      <th>Fax</th>
+      <th>Referente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @merchants.each do |merchant| %>
+      <tr>
+        <td><%= merchant.stand %></td>
+        <td><%= merchant.ragioneSociale %></td>
+        <td class="info"><%= merchant.telefono %></td>
+        <td><%= merchant.fax %></td>
+        <td><%= merchant.referente %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -22,6 +22,7 @@ gem 'devise'
 gem "auto_html"
 gem 'nokogiri', '~> 1.6.6.2'
 
+
 #gem 'haml', '~> 4.0.6'
 #gem 'haml-rails', '~> 0.8.2'
 gem 'mechanize', '~> 2.7.3'

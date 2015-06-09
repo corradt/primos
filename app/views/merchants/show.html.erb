@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stand:</strong>
+  <%= @merchant.stand %>
+</p>
+
+<p>
+  <strong>Ragionesociale:</strong>
+  <%= @merchant.ragioneSociale %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @merchant.telefono %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @merchant.fax %>
+</p>
+
+<p>
+  <strong>Referente:</strong>
+  <%= @merchant.referente %>
+</p>
+
+<%= link_to 'Edit', edit_merchant_path(@merchant) %> |
+<%= link_to 'Back', merchants_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stand: MyString
+  ragioneSociale: MyString
+  telefono: MyString
+  fax: MyString
+  referente: MyString
+
+two:
+  stand: MyString
+  ragioneSociale: MyString
+  telefono: MyString
+  fax: MyString
+  referente: MyString

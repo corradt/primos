@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :merchants
+
+  resources :products
+
   devise_for :admins, controllers: { registrations: "admins/registrations",sessions: "admins/sessions"}
 
   devise_for :doctors, controllers: {registrations: "doctors/registrations", sessions: "doctors/sessions" }
@@ -18,6 +22,8 @@ Rails.application.routes.draw do
   devise_for :users
   
   get 'pages/prova'
+  #get 'merchants'
+  #get 'products'
 
   get 'pages/prezzi_mercato_agricolo'
   get 'pages/prezzi_mercato_ittico'

@@ -1,0 +1,42 @@
+<h1>Lista Prodotti Ortofrutticoli</h1>
+
+
+  
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Varieta'</th>
+      <th>Prezzo Min</th>
+      <th>Prezzo Medio</th>
+      <th>Prezzo Max</th>
+      <th>Calibro</th>
+      <th>Categoria</th>
+      <th>Origine</th>
+      <th>Unita' di misura</th>
+      <th>Gruppo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.variety %></td>
+        <td class="warning"><%= product.minPrice %></td>
+        <td class="info"><%= product.medPrice %></td>
+        <td class="success"><%= product.maxPrice %></td>
+        <td><%= product.calibro %></td>
+        <td><%= product.category %></td>
+        <td><%= product.origin %></td>
+        <td><%= product.unitOfMisure %></td>
+        <td><%= product.group %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

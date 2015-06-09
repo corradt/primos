@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Variety:</strong>
+  <%= @product.variety %>
+</p>
+
+<p>
+  <strong>Minprice:</strong>
+  <%= @product.minPrice %>
+</p>
+
+<p>
+  <strong>Medprice:</strong>
+  <%= @product.medPrice %>
+</p>
+
+<p>
+  <strong>Maxprice:</strong>
+  <%= @product.maxPrice %>
+</p>
+
+<p>
+  <strong>Calibro:</strong>
+  <%= @product.calibro %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @product.category %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @product.origin %>
+</p>
+
+<p>
+  <strong>Unitofmisure:</strong>
+  <%= @product.unitOfMisure %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @product.group %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
